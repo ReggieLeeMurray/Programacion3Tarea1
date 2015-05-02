@@ -84,15 +84,15 @@ int getMayor(int arreglo[], int tamano)
 {
     int temp;
     temp=arreglo[0];
-    int k=tamano-1;
-    for (int i=0; i<k; i++)
+
+    for (int i=0; i<tamano-1; i++)
     {
-    if (temp>arreglo [i+1])
-    {temp=arreglo[i];}
-    else
+    if (temp<arreglo [i+1])
     {temp=arreglo[i+1];}
+    else
+    {temp=temp;}
     }
-    cout << k;
+
     return temp;
 }
 
@@ -109,6 +109,8 @@ int getMenor(int arreglo[], int tamano)
     else
     {temp=temp;}
     }
+
+    return temp;
 }
 
 //Devuelve el promedio de los numeros del arreglo (dado) que contiene tamano (dado) elementos
